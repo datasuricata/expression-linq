@@ -19,7 +19,9 @@ namespace poc.console
         [Display(Description = "OR")]
         Or,
         [Display(Description = "AND")]
-        And
+        And,
+        [Display(Description = "Count")]
+        Count
     }
 
     public enum Operator

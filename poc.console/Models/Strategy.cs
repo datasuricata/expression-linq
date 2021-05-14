@@ -16,14 +16,14 @@ namespace poc.console
             {
                 Id = Guid.NewGuid().ToString(),
                 Title = "Primeira estratégia",
-                Description = "Apenas produtos com categorias PA e data maior que 1970",
+                Description = "quantidade de produtos não pode passar de 3 com categorias PP e data maior ou igual que 1910 e data menor ou igual que 1970",
                 Roles = new List<Role>
                 {
                     new Role
                     {
                         Id = Guid.NewGuid().ToString(),
                         Order = 0,
-                        Value = "PA",
+                        Value = "PP", 
                         Property = "Category",
                         Operator = Operator.Equals,
                         Condition = Condition.Default
@@ -32,10 +32,28 @@ namespace poc.console
                     {
                         Id = Guid.NewGuid().ToString(),
                         Order = 1,
-                        Value = "1/1/1970",
+                        Value = "1/1/1950",
                         Property = "CreatedAt",
-                        Operator = Operator.GratherThen,
+                        Operator = Operator.GratherOrEqualThen,
                         Condition = Condition.And
+                    },
+                    new Role
+                    {
+                        Id = Guid.NewGuid().ToString(),
+                        Order = 2,
+                        Value = "1/1/1999",
+                        Property = "CreatedAt",
+                        Operator = Operator.SmallerOrEqualThen,
+                        Condition = Condition.And
+                    },
+                    new Role
+                    {
+                        Id = Guid.NewGuid().ToString(),
+                        Order = 3,
+                        Value = "3",
+                        Property = "Category",
+                        Operator = Operator.GratherThen,
+                        Condition = Condition.Count
                     }
                 }
             };
