@@ -16,7 +16,7 @@ namespace poc.console
             {
                 Id = Guid.NewGuid().ToString(),
                 Title = "Primeira estratégia",
-                Description = "quantidade de produtos não pode passar de 3 com categorias PP e data maior ou igual que 1910 e data menor ou igual que 1970",
+                Description = "quantidade de produtos não pode passar de 3 quando for categoria PP e com data maior ou igual que 1910 e com data menor ou igual que 1970",
                 Roles = new List<Role>
                 {
                     new Role

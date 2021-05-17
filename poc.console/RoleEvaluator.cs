@@ -34,7 +34,8 @@ namespace poc.console
                         _ => throw new ArgumentException(message: "operador inválido"),
                     };
 
-                Console.WriteLine($"Is valid: {IsValid(roleCounter.Operator, number, value)}");
+                Console.WriteLine("Válida se a entrada de um novo produto é válida");
+                Console.WriteLine($"É valido: {IsValid(roleCounter.Operator, number, value)}");
             }
 
             query.ToList().ForEach(x => Console.WriteLine($"Product:{x.Name} - {x.Category} - Date:{x.CreatedAt:d} - {x.Value:c}"));
